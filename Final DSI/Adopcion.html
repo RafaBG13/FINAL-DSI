@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <title>Formulario Adopcion</title>
+</head>
+
+<body>
+    <a href="./index.html">
+        <div>
+            <button class="boton">Volver</button>
+        </div>
+    </a>
+    <div class="contendeor">
+        <div>
+            <h2 class="subtitulo">Formulario de Datos Personales</h2>
+        </div>
+        <form id="formularioAdopcion">
+            <div class="grupo">
+                <label for="nombre">Nombre:</label>
+                <input class="inputFormularios" type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="grupo">
+                <label for="apellido">Apellido:</label>
+                <input class="inputFormularios"  type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="grupo">
+                <label for="Edad">Edad:</label>
+                <input class="inputFormularios"  type="number" id="Edad" name="Edad" required>
+            </div>
+            <div class="grupo">
+                <label for="email">Email:</label>
+                <input class="inputFormularios"  type="email" id="email" name="email" required>
+            </div>
+            <div class="grupo">
+                <label for="Teléfono ">Teléfono:</label>
+                <input class="inputFormularios" type="tel" id="Teléfono" name="Teléfono" required>
+            </div>
+            <div class="grupo">
+                <label for="vivenda">¿El perro va a vivir en el jardin?:</label>
+                <select class="inputFormularios" id="vivenda" name="vivenda">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="grupo">
+                <label for="niños">¿Hay niños en la vivienda?:</label>
+                <select class="inputFormularios" id="niños" name="niños">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="grupo">
+                <label for="perros">¿Tiene mas perros?:</label>
+                <select class="inputFormularios" id="perros" name="perros">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="grupo" id="btnEnviar">
+                <button class="boton" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./Adopcion.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB30F3a6Vr-f6eVD-8pUSn5ULCXRJUsC6Q",
+            authDomain: "fdsi-efb50.firebaseapp.com",
+            projectId: "fdsi-efb50",
+            storageBucket: "fdsi-efb50.appspot.com",
+            messagingSenderId: "311462188289",
+            appId: "1:311462188289:web:8fca5dc1c89b274e767700"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore()
+    </script>
+</body>
+
+</html>
