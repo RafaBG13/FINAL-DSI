@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Registro de perros</title>
+</head>
+
+<body>
+    <div class="contendeor">
+        <div>
+            <h2 class="subtitulo">Formulario para registrar un perro</h2>
+        </div>
+        <form id="formularioRegistro">
+            <div class="grupo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="grupo">
+                <label for="Ubicación">Ubicación:</label>
+                <select id="Ubicación" name="Ubicación">
+                    <option value="Ciudad de México">Ciudad de México</option>
+                    <option value="Colima">Colima</option>
+                    <option value="Estado de México">Estado de México</option>
+                    <option value="Guanajuato">Guanajuato</option>
+                    <option value="Jalisco">Jalisco</option>
+                    <option value="Nuevo León">Nuevo León</option>
+                    <option value="Puebla">Puebla</option>
+                    <option value="Querétaro">Querétaro</option>
+                    <option value="Tamaulipas">Tamaulipas</option>
+                    <option value="Veracruz">Veracruz</option>
+                    <option value="Yucatán">Yucatán</option>
+                </select>
+            </div>
+            <div class="grupo">
+                <label for="Tamaño">Tamaños:</label>
+                <select id="Tamaño" name="Tamaño">
+                    <option value="Pequeño">Pequeño</option>
+                    <option value="Mediano">Mediano</option>
+                    <option value="Grande">Grande</option>
+                </select>
+            </div>
+            <div class="grupo">
+                <label for="Edad">Edad:</label>
+                <select id="Edad" name="Edad">
+                    <option value="Cachorro">Cachorro</option>
+                    <option value="Adulto">Adulto</option>
+                    <option value="Adulto Mayor">Adulto Mayor</option>
+                </select>
+            </div>
+            <div class="grupo">
+                <label for="Sexo">Sexo:</label>
+                <select id="Sexo" name="Sexo">
+                    <option value="Hembra">Hembra</option>
+                    <option value="Macho">Macho</option>
+                </select>
+            </div>
+            <div class="grupo">
+                <label for="Raza">Raza:</label>
+                <select id="Raza" name="Raza">
+                    <option value="Labrador">Labrador</option>
+                    <option value="Pugs">Pugs</option>
+                    <option value="Schnauzer">Schnauzer</option>
+                    <option value="Husky">Husky</option>
+                    <option value="Pastor Alemán">Pastor Alemán</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                    <option value="Pitbull">Pitbull</option>
+                    <option value="Golden Retriever">Golden Retriever</option>
+                    <option value="Beagle">Beagle</option>
+                    <option value="Border Collie">Border Collie</option>
+                    <option value="Callejero">Callejero</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+            <div>
+                <button class="boton" id="btnEnviarPerros" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./index.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB30F3a6Vr-f6eVD-8pUSn5ULCXRJUsC6Q",
+            authDomain: "fdsi-efb50.firebaseapp.com",
+            projectId: "fdsi-efb50",
+            storageBucket: "fdsi-efb50.appspot.com",
+            messagingSenderId: "311462188289",
+            appId: "1:311462188289:web:8fca5dc1c89b274e767700"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore()
+    </script>
+</body>
+
+</html>
